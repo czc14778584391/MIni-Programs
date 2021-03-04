@@ -1,0 +1,11 @@
+
+page{
+  background-color:  #E3E3E5;
+}
+.item{
+  color: black;
+  border-bottom: 2rpx solid white;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  text-indent: 2em;
+}

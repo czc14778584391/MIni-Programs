@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+
+
+<view class="input">
+<input placeholder="/点击搜索歌手/歌曲" bindblur="inputRes"></input>
+<icon type="search" bindtap="search"></icon>
+</view>
+
+<view class="item" wx:for="{{arr}}">
+<view class="header"  bindtap="tosong" data-id="{{item.id}}">
+<view class="text">
+<view class="songname">歌曲：{{item.name}}</view>
+<view class="artist">歌手：<text wx:for="{{item.artists}}" wx:for-item="songer">{{songer.name}} </text></view>
+</view>
+</view>
+</view>

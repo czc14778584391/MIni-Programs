@@ -1,0 +1,35 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="top">
+<view class="mine">我的</view>
+<view class="fine">发现</view>
+<view class="club">云村</view>
+<view class="vido">视频</view>
+<view class="search">
+<icon type="search" size="18" bindtap="tosearch"></icon>
+</view>
+</view>
+
+<scroll-view scroll-x="true"
+scroll-with-animation="true"
+class="wrap"
+>
+<view class="banner" wx:for="{{banner}}">
+<image src="{{banner[index].pic}}" class="Ie" data-id="{{banner[index].song.id}}" bindtap="tosong" 
+></image>
+</view>
+</scroll-view>
+
+<view class="top2">
+推荐歌单
+</view>
+
+<view class="warp2">
+<view class="item2" wx:for="{{recommedList}}" 
+data-id="{{item.id}}" data-name="{{item.name}}"
+bindtap="toList"
+ >
+<image src="{{item.picUrl}}"></image>
+<view>{{item.name}}</view>
+</view>
+</view>

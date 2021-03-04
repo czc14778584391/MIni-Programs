@@ -1,0 +1,89 @@
+
+<mp-toptips msg="{{msg}}" type="error" show="{{showTopTips}}"></mp-toptips>
+<form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-cells weui-cells_after-title">
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-contact" color="#387ef5"  size="20" />姓名：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="inputname" placeholder="请输入姓名*必填*"/>
+                </view>
+            </view>
+
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-contacts" color="#387ef5"  size="20" />性别：</view>
+                </view>
+                <view class="weui-cell__bd">
+                     <radio-group name="sex">
+                    <label><radio value="女" checked="true"/>女</label>
+                    <label><radio value="男"/>男</label>
+                    </radio-group>
+                </view>
+            </view>
+            </view>
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-body" color="#387ef5"  size="20"  />年龄：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <slider name="age" show-value block-size="20" activeColor="pink" min="16" value="20" backgroundColor="#1AAD19"></slider>
+                </view>
+            </view>
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon" type="ios-car" color="#387ef5"  size="20" />运费：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input   class="weui-input" type="digit" name="inputTransPay" placeholder="请输入运费*必填*"/>
+                </view>
+            </view>
+
+             <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-briefcase" color="#387ef5"  size="20" />礼袋费：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="0" type="digit" name="pagPay" placeholder="请输入礼袋费"/>
+                </view>
+            </view>
+
+   
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"> <wux-icon class="icon"  type="ios-gift" color="#387ef5"  size="20" />礼盒费：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input   value="0" class="weui-input" name="boxPay" type="digit" placeholder="请输入费用"/>
+                </view>
+            </view>
+
+             <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-paper" size="20" color="#387ef5" />备注：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input    class="weui-input" name="other" type="text" placeholder="这个上家还有什么要注意的呢？"/>
+                </view>
+            </view>
+
+            
+        
+        <view class="submit">
+      <button class="weui-btn" type="primary" formType="submit" >提交</button>
+  </view>
+        </form>
+         <button class="weui-btn" bindtap="backToList">返回</button>
+
+         
+    
+     
+     
+     
+     
+   

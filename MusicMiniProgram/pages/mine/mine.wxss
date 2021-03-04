@@ -1,0 +1,54 @@
+
+.top{
+height: 50rpx;
+}
+
+.top view{
+  display: inline-block;
+  margin-left: 60rpx;
+  margin-top: 10rpx;
+  text-indent: 10rpx;
+  font-size: 40rpx;
+} 
+
+
+.wrap{
+white-space: nowrap;
+}
+
+.banner{
+  margin-top: 25rpx;
+ display: inline-block;
+}
+
+.banner image{
+  border-radius:30rpx;
+  margin-left: 12rpx;
+  height: 300rpx;
+}
+
+.top2{
+ border-top: 2rpx solid #D9D9D9;
+ font-weight: bold;
+ text-indent: 20rpx;
+}
+
+.item2{
+  width: 33.33%;
+  height: 380rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.item2 image{
+  width: 90%;
+  display: block;
+  height: 200rpx;
+  margin: 10rpx auto;
+  border-radius: 40rpx;
+}
+
+.item2 view{
+  width: 91%;
+  margin: 0px auto;
+}

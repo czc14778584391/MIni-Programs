@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<image src="{{image}}"  class="image" bindtap="bind"></image>
+
+<view class="all">
+<view>
+
+ <slider 
+min="0"
+max="{{duration}}"
+value="{{currentTime}}"
+backgroundColor="#D8D9DD"
+activeColor="#C62F2F"
+block-color="#C62F2F"
+block-size="12"
+bindchange="change"
+bindchanging="changing"
+></slider>
+
+</view>
+<view class="header">
+<view class="start">{{nowTime}}</view>
+<view class="end">{{sumTime}}</view>
+</view>
+
+<scroll-view class="wrap" scroll-y="true"
+scroll-into-view="{{viewId}}"
+scroll-with-animation="true"
+>
+<view>
+<view wx:for="{{lyric}}"
+id="ti-{{index}}"
+class="{{viewId=='ti-'+index?'active':''}}"
+>{{item}}</view>
+</view>
+</scroll-view>
+</view>

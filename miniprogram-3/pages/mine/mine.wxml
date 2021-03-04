@@ -1,0 +1,147 @@
+
+<view class="page">
+
+  <view class="page-top {{flag?'pop':''}}" bindtap="{{flag?'turnBack':''}}" >
+  <!-- 首页顶部 -->
+  
+  <view class="top" hidden="{{topHide}}" >
+  <view>
+    <image class="slide" src="../../images/btn.png" bindtap='func'></image>
+    </view>
+    <picker  class="showdata" mode="date" value="{{date}}" start="2018-06-08" end="2022-09-01" bindchange="bindDateChange">
+<text class="chooseDate">{{date}}</text>
+</picker>
+
+<view class="left" wx:if="{{profit != 0}}">
+                <text class="p">总利润:</text>
+                <text class="span">¥ {{profit}}</text>
+          </view>
+
+           <view class="left" wx:if="{{expenditur != 0}}">
+                <text class="p">总支出:</text>
+                <text class="span">¥ {{ expenditur}}</text>
+          </view>
+  </view>
+
+ 
+  <!-- 内容显示 -->
+<scroll-view scroll-y="true" class="scroll" >
+
+        <wux-cell-group wx:for="{{list}}" wx:key=" "  >
+            <wux-swipe-action  right="{{ right }}" data="{{index}}" bind:click="openConfirm" autoClose="true" hidden="{{date!=item.date}}">
+                <wux-cell >                    
+      <view class="weui-panel"  hidden="{{date!=item.date}}" >
+            <view class="weui-panel__hd">{{proArry[item.name][item.proName]}}× {{item.proNum}}</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__desc">
+                    <wux-tag color="#f50">利润：{{item.sum}} </wux-tag>
+                    <wux-tag color="#2db7f5"  >售价：{{item.realPrice}}</wux-tag>
+                     <wux-tag color="#108ee9"  >进货：{{item.inPrice}}</wux-tag>
+                    <wux-tag color="#87d068"  >包装：{{multiArray[2][item.isGbox]}}</wux-tag>
+                   
+                                
+                    </view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">商品来源:{{multiArray[0][item.name]}}</view>
+                        <view class="weui-media-box__info__meta">时间：{{item.date}}</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它</view>
+                    </view>
+                </view>
+            </view>
+        </view>         
+                </wux-cell>
+            </wux-swipe-action>
+        </wux-cell-group>
+
+
+ <!-- <button class="weui-btn" type="default" bindtap="openConfirm">原生 Dialog</button> -->
+ <view class="tips" hidden="{{number!=0}}">该天没有账本记录喔，点击右下方 + 添加</view>
+  
+       
+
+</scroll-view>
+
+
+  <!-- 添加功能 -->
+  
+     <wux-fab-button position="bottomRight" theme="dark" direction="vertical"   bind:change="onChange1"/>
+    
+
+<!-- 添加弹窗 -->
+    <view class="addBox_screen" hidden="{{showAdd}}"  > </view>
+    <view class="addbBox" hidden="{{showAdd}}">
+    <!-- 内容 -->
+    <view class="add-page">
+    <view class="mod-a">
+    <!-- 任务名称 -->
+    <view class="mod t-name">
+    <text class="key">拿货详情：</text>
+    <picker class="input" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+    {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+    </picker>
+    </view>         
+    </view>
+
+    <view class="mod-a mt20">
+        <!-- 任务地点 -->
+       <wux-cell-group>
+            <wux-cell title="数量" hover-class="none">
+                <wux-input-number default-value="0" slot="footer" min='0'  disabled="{{ false }}" bind:change="onChange"/>
+            </wux-cell>
+        </wux-cell-group> 
+    </view>
+
+    <view class="mod-a mt20">
+        <view class="mod t-address" >
+            <text class="key">实际出售金额：</text>
+            <input bindinput="selectPrice" class="inputpre" type="digit" placeholder="请输入金额"  value="{{curIpt2}}"/>
+        </view>
+    </view>
+  
+     <!-- 创建按钮 -->
+    <view class="create">
+        <button class="btn {{creating ? 'disabled' : ''}}" bindtap="bindSubmit">添加</button>
+    </view>
+
+    
+</view>
+
+</view> 
+</view>
+ 
+<!-- 测滑内容  -->
+  <view class="page-content">
+  <!-- 用户信息显示 -->
+  <view class="userinfo">
+    <button class="userimage" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- 导航栏 -->
+  
+    <view class='item'>
+      <image src="../../images/icon_11.png" class="icon"></image>
+      <navigator url='../index2/index2' class="content">生活账本</navigator>  
+    </view>
+    
+    <view class='item' >
+     <image src="../../images/icon_13.png" class="icon"></image>
+      <navigator url='../showProList/showProList'class="content" >商品信息</navigator>  
+    </view>
+    <view class='item'>
+     <image src="../../images/icon_05.png" class="icon"></image>
+      <navigator url='../showUp/showUp'class="content">上家管理</navigator>  
+    </view>
+    <view class='item'>
+     <image src="../../images/icon_09.png" class="icon"></image>
+      <navigator url='../index3/index3'class="content">统计</navigator>  
+    </view>
+  </view>
+
+  
+</view>

@@ -1,0 +1,7 @@
+
+<view class="wrap">
+  <view class="item" wx:for="{{type}}"
+  data-id="{{index}}" data-text="{{item}}"
+  bindtap="tolist">{{item}}</view>
+  <!-- <view class="item">飙升榜</view> -->
+</view>

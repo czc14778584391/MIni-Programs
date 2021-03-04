@@ -1,0 +1,12 @@
+
+<view class="top">歌单详情</view>
+
+
+<view class="wrap">
+<view class="detial" wx:for="{{list}}"  bindtap="toSong" data-id="{{item.id}}">
+<view class="song">歌曲：{{item.name}}</view>
+<view class="singer">
+<text wx:for="{{item.ar}}" wx:for-item="singers">歌手：{{singers.name}} </text>
+</view>
+</view>
+</view>

@@ -1,0 +1,60 @@
+ <view class="showUpList" wx:for="{{prolist}}" wx:key=" ">
+    <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-id="{{index}}" >
+        <view class="hd">
+         <view class="right">
+        <image src="../../images/ben.png" class="photo"></image>
+        </view>
+
+           <view class="lift">
+        <view class="name">{{item.inputname}}</view>
+        <view class="content">类别：{{ categoryArray[item. category]}} 进货：{{item. inputPrice}} 上家：{{upList[item. up]}}</view>
+        <view class="more" bindtap="more" data-id="{{index}}">点击查看更多信息</view>
+        </view>
+        </view>
+    </mp-slideview>
+ </view>
+
+<view class="tips" hidden="{{showTips}}" >没有商品信息，点击右下方 + 添加</view>
+ 
+     <wux-fab-button position="bottomRight" theme="dark" direction="vertical"  spaceBetween="15"buttons="{{ buttons }}" bind:click="onClick"/>
+
+     <view class="addBox_screen" hidden="{{ showAdd}}" bindtap="hideDetail" > </view>
+    <view class="addbBox" hidden="{{ showAdd}}">
+    <!-- 内容 -->
+    <view class="add-page">
+    <view class="mod-a">
+
+     <view class="mt20">
+        <view class="mod " >
+            <text class="name">姓名:{{showProDetail.inputname}}</text>
+          <view>类别：{{categoryArray[showProDetail. category]}}</view>
+        </view>
+    </view>
+
+    <view class="mt20">
+        <view class="mod " >
+            <text class="name">上家：{{upList[showProDetail. up]}}</text>
+         <view></view>
+        </view>
+    </view>
+
+    <view class="mt20">
+        <view class="mod " >
+            <text class="name">实价：{{showProDetail.reallyPrice}}</text>
+          <view>进货价：{{showProDetail.inputPrice}}</view>
+        </view>
+    </view>
+
+
+    <view class="mt20">
+        <view class="mod" >
+            <text class="name">备注：{{showProDetail.other}}</text>
+        </view>
+    </view>
+
+    </view>
+    </view>
+    </view>
+
+
+    

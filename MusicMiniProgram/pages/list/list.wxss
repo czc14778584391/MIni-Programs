@@ -1,0 +1,32 @@
+/* pages/list/list.wxss */
+page{
+  background-color: #E3E3E5;
+}
+.top{
+  height: 100rpx;
+  text-align: center;
+  margin-top: 25rpx;
+  font-weight: 700;
+  border-bottom: 4rpx solid black;
+}
+
+.wrap{
+  height: 200rpx;
+  /* border: 2rpx solid black; */
+  line-height: 80rpx;
+   
+}
+.wrap view{
+   margin-top: 15rpx;
+   margin-left:40rpx;
+  
+}
+
+.singer{
+  font-size: 20;
+  text-indent: 38rpx;
+}
+
+.detial{
+ border-bottom: 2rpx solid  #D9D9D9;
+}

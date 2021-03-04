@@ -1,0 +1,8 @@
+page{
+  background-color: #E6E7EA
+}
+
+.weui-cell{
+  background-color: #E6E7EA
+}
+

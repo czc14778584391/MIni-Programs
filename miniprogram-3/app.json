@@ -1,0 +1,39 @@
+
+{
+  
+  "pages": [
+     "pages/mine/mine",
+    "pages/showProList/showProList",
+    "pages/addpro/addpro",
+    "pages/showUp/showUp",
+    "pages/index/index",
+    "pages/myUp/myUp"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFC0CB",
+    "navigationBarTitleText": "个人账本",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+"usingComponents": {
+  "wux-cell-group": "../../dist/cell-group/index",
+  "wux-cell": "../../dist/cell/index",
+  "wux-input-number": "../../dist/input-number/index",
+
+  "wux-swipe-action-group": "../../dist/swipe-action-group/index",
+  "wux-swipe-action": "../../dist/swipe-action/index",
+  "wux-cell-group": "../../dist/cell-group/index",
+  "wux-cell": "../../dist/cell/index",
+  "wux-icon": "../../dist/icon/index",
+  "wux-tag": "../../dist/tag/index",
+    "mp-toptips": "../../dist/toptips/toptips",
+    "wux-icon": "../../dist/icon/index",
+      "mp-slideview": "../../components/slideview/slideview",
+      "mp-cells": "../../components/cells/cells",
+      "mp-cell": "../../components/cell/cell",
+      "wux-fab-button": "../../dist/fab-button/index"
+}
+}

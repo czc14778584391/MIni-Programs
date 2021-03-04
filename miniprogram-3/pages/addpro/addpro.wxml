@@ -1,0 +1,84 @@
+<mp-toptips msg="{{msg}}" type="error" show="{{showTopTips}}"></mp-toptips>
+<form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-cells weui-cells_after-title">
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-contact" color="#387ef5"  size="20" />商品名称：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="inputname" placeholder="请输入商品名"/>
+                </view>
+            </view>
+
+  
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-swap" color="#387ef5"  size="20" />类别：</view>
+                </view>
+                <view class="weui-cell__bd">
+                  <view class="section">
+  <picker bindchange="bindPickerChange1" value="{{index}}" range="{{categoryArray}}" name="category">
+    <view class="picker">
+    当前选择：{{categoryArray[categoryIndex]}}
+    </view>
+  </picker>
+</view>
+                </view>
+            </view>
+          
+
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-heart" color="#387ef5"  size="20" />上家：</view>
+                </view>
+                <view class="weui-cell__bd">
+                  <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{upList}}" name="up">
+    <view class="picker">
+    当前选择：{{upList[index]}}
+    </view>
+  </picker>
+</view>
+      </view>
+            </view>
+            </view>
+
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon" type="ios-wallet" color="#387ef5"  size="20" />定价：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input   class="weui-input" type="digit" name="reallyPrice" placeholder="请输入定价"/>
+                </view>
+            </view>
+
+             <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-briefcase" color="#387ef5"  size="20" />进货价：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input"  type="digit" name="inputPrice" placeholder="请输入进货价"/>
+                </view>
+            </view>
+
+   
+
+             <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label"><wux-icon class="icon"  type="ios-create" size="20" color="#387ef5" />备注：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input    class="weui-input" name="other" type="text" placeholder="*选填*"/>
+                </view>
+            </view>
+
+            
+        
+        <view class="submit">
+      <button class="weui-btn" type="primary" formType="submit" >提交</button>
+  </view>
+        </form>
+         <button class="weui-btn" bindtap="backToList">返回</button>

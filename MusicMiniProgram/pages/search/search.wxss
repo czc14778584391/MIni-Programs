@@ -1,0 +1,37 @@
+/* pages/search/search.wxss */
+.input{
+  display: flex;
+  margin-top: 20rpx;
+ 
+}
+.input input{
+  border-bottom: 2rpx solid #C3C3C3;
+ flex: 1;
+}
+
+.header{
+margin-top: 50rpx;
+display: flex;
+}
+
+.header image{
+  height: 250rpx;
+  width: 250rpx;
+}
+
+.text{
+  color:black;
+  line-height: 60rpx;
+  margin-left: 50rpx;
+  font-size: 35rpx;
+}
+
+.songname{
+  white-space: nowrap;
+}
+
+.artist{
+ font-size: 30rpx;
+ color: #5C5C5C;
+ text-indent: 10rpx;
+}

@@ -1,0 +1,40 @@
+/**index.wxss**/
+page{
+   background-color:  #ACB2B7;
+}
+
+.header{
+ display: flex;
+}
+
+.header view{
+  flex: 1
+}
+.end{
+  text-align: right;
+  margin-right: 40rpx;
+}
+.image{
+  margin-top: 40rpx;
+  margin-left: 55rpx;
+  height: 640rpx;
+  width: 640rpx;
+  border-radius: 600rpx;
+}
+
+.wrap{
+  height: 300rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.active{
+  font-size: 35rpx;
+  color:  #FFFFF1;
+}
